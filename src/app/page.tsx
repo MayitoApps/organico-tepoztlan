@@ -61,8 +61,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Botones del Hero: en un solo párrafo (fila horizontal), más pequeños y compactos */}
-          <div className="flex flex-row items-center justify-center gap-3 w-auto flex-nowrap">
+          <div className="flex flex-wrap items-center justify-center gap-3 w-full max-w-full">
             <a
               href={generalBookingWa}
               target="_blank"

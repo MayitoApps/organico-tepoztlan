@@ -141,8 +141,10 @@ export default function ContactForm() {
   return (
     <div className="relative w-full max-w-3xl mx-auto">
       {/* Decorative ambient glowing orbs */}
-      <div className="absolute -top-12 -left-12 w-64 h-64 bg-[#C5B49F]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-12 -right-12 w-72 h-72 bg-[#A1B3A7]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-2xl">
+        <div className="absolute -top-12 -left-12 w-64 h-64 bg-[#C5B49F]/10 rounded-full blur-3xl" />
+        <div className="absolute -bottom-12 -right-12 w-72 h-72 bg-[#A1B3A7]/10 rounded-full blur-3xl" />
+      </div>
 
       {/* Main Glassmorphic Card */}
       <div className="relative bg-white/[0.02] border border-white/10 backdrop-blur-xl shadow-2xl rounded-2xl p-6 md:p-10 text-[#F4F5F1]">

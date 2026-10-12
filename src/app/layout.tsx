@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Outfit, Cinzel } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -29,6 +29,12 @@ const cinzel = Cinzel({
   weight: ["600", "700", "800"],
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.organicohotelboutiquetepoz.com"),
@@ -167,10 +173,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-[#16241C] text-[#F4F5F1] antialiased selection:bg-[#C5B49F] selection:text-[#16241C]">
+      <body className="min-h-screen flex flex-col w-full max-w-full overflow-x-hidden bg-[#16241C] text-[#F4F5F1] antialiased selection:bg-[#C5B49F] selection:text-[#16241C]">
         <ScrollObserver />
         <Navbar />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow w-full max-w-full overflow-x-hidden">{children}</main>
         <Footer />
         <FloatingWhatsApp />
         <DiaDeMuertosPopup />
