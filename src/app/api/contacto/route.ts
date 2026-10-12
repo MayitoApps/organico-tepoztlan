@@ -65,7 +65,7 @@ function buildHtmlTemplate({
   const waUrl = waPhone.length >= 10 ? `https://wa.me/${waPhone}?text=${waGreeting}` : null;
   const telUrl = telefono ? `tel:${telefono.replace(/\s+/g, "")}` : null;
   const replyMailUrl = `mailto:${correo}?subject=${encodeURIComponent(
-    `Re: [Orgánico Tepoztlán] ${motivo} - ${nombre}`
+    `Re: [Orgánico Hotel Boutique Tepoztlán] ${motivo} - ${nombre}`
   )}`;
 
   return `<!DOCTYPE html>
@@ -77,7 +77,7 @@ function buildHtmlTemplate({
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
   <meta name="color-scheme" content="dark only" />
   <meta name="supported-color-schemes" content="dark only" />
-  <title>Orgánico Tepoztlán - ${nombre}</title>
+  <title>Orgánico Hotel Boutique Tepoztlán - ${nombre}</title>
   <style>
     :root { color-scheme: dark only; supported-color-schemes: dark only; }
     html, body {
@@ -153,16 +153,10 @@ function buildHtmlTemplate({
           
           <!-- Encabezado Institucional -->
           <tr>
-            <td class="header-padding" style="background-color: #1A2821; border-bottom: 2px solid #C5B49F; padding: 28px 24px 22px; text-align: center;">
-              <div style="font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #C5B49F; margin-bottom: 6px;">
-                ✦ NUEVA SOLICITUD WEB · CONCIERGE
-              </div>
-              <h1 class="brand-title" style="margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 24px; letter-spacing: 1.5px; color: #F4F5F1; font-weight: normal; line-height: 1.25;">
-                Orgánico Hotel Boutique
+            <td class="header-padding" style="background-color: #1A2821; border-bottom: 2px solid #C5B49F; padding: 24px 20px; text-align: center;">
+              <h1 class="brand-title" style="margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 22px; letter-spacing: 1.5px; color: #F4F5F1; font-weight: normal; line-height: 1.3;">
+                Orgánico Hotel Boutique Tepoztlán
               </h1>
-              <div style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #9EADA3; margin-top: 5px;">
-                Tepoztlán, Morelos
-              </div>
             </td>
           </tr>
 
@@ -412,7 +406,7 @@ export async function POST(req: NextRequest) {
     // 4. Parámetros de envío
     const receiverEmail =
       process.env.CONTACT_RECEIVER_EMAIL?.trim() || DEFAULT_RECEIVER_EMAIL;
-    const emailSubject = `[Orgánico Tepoztlán] ${cleanMotivo} - ${cleanNombre}`;
+    const emailSubject = `[Orgánico Hotel Boutique Tepoztlán] ${cleanMotivo} - ${cleanNombre}`;
     const fechaHoraEnvio = getFormattedMexicoDate();
 
     const htmlContent = buildHtmlTemplate({
