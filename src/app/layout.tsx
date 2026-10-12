@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ScrollObserver from "@/components/ScrollObserver";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
 import { HOTEL_INFO } from "@/lib/constants";
 
 const cormorant = Cormorant_Garamond({
