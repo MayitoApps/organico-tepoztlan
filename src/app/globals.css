@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+    --font-outfit: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #16241C;
+    color: #F4F5F1;
+  }
+
+  body {
+    background-color: #16241C;
+    color: #F4F5F1;
+    font-family: var(--font-outfit);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: #C5B49F;
+    color: #16241C;
+  }
+}
+
+/* Luxury Custom Utilities */
+.font-serif {
+  font-family: var(--font-cormorant);
+}
+
+.font-sans {
+  font-family: var(--font-outfit);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #E2D8CC 0%, #C5B49F 50%, #A4927B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gold-subtle {
+  border-color: rgba(197, 180, 159, 0.2);
+}
+
+.bg-dark-glass {
+  background: rgba(34, 54, 44, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* ========================================================
+   LUXURY SCROLL-TRIGGERED REVEAL SYSTEM
+   ======================================================== */
+.reveal-on-scroll,
+.reveal-scale-up,
+.reveal-fade-in,
+.reveal-slide-left,
+.reveal-slide-right {
+  transition-property: opacity, transform;
+  transition-duration: 0.85s;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Initial state only activated once JS is ready (prevents SSR blank flash) */
+.js-ready .reveal-on-scroll:not(.revealed) {
+  opacity: 0;
+  transform: translateY(32px);
+}
+
+.js-ready .reveal-scale-up:not(.revealed) {
+  opacity: 0;
+  transform: scale(0.96) translateY(24px);
+}
+
+.js-ready .reveal-fade-in:not(.revealed) {
+  opacity: 0;
+}
+
+.js-ready .reveal-slide-left:not(.revealed) {
+  opacity: 0;
+  transform: translateX(-36px);
+}
+
+.js-ready .reveal-slide-right:not(.revealed) {
+  opacity: 0;
+  transform: translateX(36px);
+}
+
+/* Revealed state (triggered by IntersectionObserver) */
+.reveal-on-scroll.revealed,
+.reveal-scale-up.revealed,
+.reveal-fade-in.revealed,
+.reveal-slide-left.revealed,
+.reveal-slide-right.revealed {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Stagger delay utilities for grid elements and lists */
+.delay-75  { transition-delay: 75ms; }
+.delay-100 { transition-delay: 100ms; }
+.delay-150 { transition-delay: 150ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-250 { transition-delay: 250ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }
+.delay-700 { transition-delay: 700ms; }
+
+/* Reduced motion preference respect */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll,
+  .reveal-scale-up,
+  .reveal-fade-in,
+  .reveal-slide-left,
+  .reveal-slide-right {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
