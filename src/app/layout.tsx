@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Outfit } from "next/font/google";
+import { Cormorant_Garamond, Outfit, Cinzel } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ScrollObserver from "@/components/ScrollObserver";
+import DiaDeMuertosPopup from "@/components/DiaDeMuertosPopup";
 import { Analytics } from "@vercel/analytics/next";
 import { HOTEL_INFO } from "@/lib/constants";
 
@@ -19,6 +20,13 @@ const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
   weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  variable: "--font-cinzel",
+  weight: ["600", "700", "800"],
   display: "swap",
 });
 
@@ -152,7 +160,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="es-MX" className={`${cormorant.variable} ${outfit.variable}`}>
+    <html lang="es-MX" className={`${cormorant.variable} ${outfit.variable} ${cinzel.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -165,6 +173,7 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
         <Footer />
         <FloatingWhatsApp />
+        <DiaDeMuertosPopup />
         <Analytics />
       </body>
     </html>

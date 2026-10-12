@@ -35,6 +35,7 @@ const config: Config = {
       fontFamily: {
         serif: ["var(--font-cormorant)", "Georgia", "serif"],
         sans: ["var(--font-outfit)", "system-ui", "sans-serif"],
+        cinzel: ["var(--font-cinzel)", "Cinzel", "Georgia", "serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
