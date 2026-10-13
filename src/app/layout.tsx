@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Outfit, Cinzel } from "next/font/google";
+import { Outfit, Plus_Jakarta_Sans, Cinzel } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,24 +9,24 @@ import DiaDeMuertosPopup from "@/components/DiaDeMuertosPopup";
 import { Analytics } from "@vercel/analytics/next";
 import { HOTEL_INFO } from "@/lib/constants";
 
-const cormorant = Cormorant_Garamond({
+const fontOutfit = Outfit({
+  variable: "--font-display",
   subsets: ["latin"],
-  variable: "--font-cormorant",
+  weight: ["300", "400", "500", "600"],
+  display: "swap",
+});
+
+const fontSans = Plus_Jakarta_Sans({
+  variable: "--font-sans",
+  subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
-const outfit = Outfit({
-  subsets: ["latin"],
-  variable: "--font-outfit",
-  weight: ["300", "400", "500", "600", "700"],
-  display: "swap",
-});
-
-const cinzel = Cinzel({
-  subsets: ["latin"],
+const fontCinzel = Cinzel({
   variable: "--font-cinzel",
-  weight: ["600", "700", "800"],
+  subsets: ["latin"],
+  weight: ["500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -166,14 +166,17 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="es-MX" className={`${cormorant.variable} ${outfit.variable} ${cinzel.variable}`}>
+    <html
+      lang="es-MX"
+      className={`${fontOutfit.variable} ${fontSans.variable} ${fontCinzel.variable} scroll-smooth`}
+    >
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col w-full max-w-full overflow-x-hidden bg-[#16241C] text-[#F4F5F1] antialiased selection:bg-[#C5B49F] selection:text-[#16241C]">
+      <body className="min-h-screen flex flex-col w-full max-w-full overflow-x-hidden bg-[#16241C] text-[#F4F5F1] font-sans antialiased selection:bg-[#C5B49F] selection:text-[#16241C]">
         <ScrollObserver />
         <Navbar />
         <main className="flex-grow w-full max-w-full overflow-x-hidden">{children}</main>

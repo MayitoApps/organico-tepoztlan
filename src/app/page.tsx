@@ -9,79 +9,16 @@ import {
   getWhatsAppLink,
 } from "@/lib/constants";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
+import HeroSection from "@/components/HeroSection";
 import GrupoOrganicoSection from "@/components/GrupoOrganicoSection";
 import OrigenSpaBanner from "@/components/OrigenSpaBanner";
 import ContactForm from "@/components/ContactForm";
 
 export default function HomePage() {
-  const generalBookingWa = getWhatsAppLink(
-    "Hola, me gustaría consultar disponibilidad general para hospedarme en Orgánico Hotel Boutique Tepoztlán."
-  );
-
   return (
     <div className="bg-[#16241C] text-[#F4F5F1] selection:bg-[#C5B49F] selection:text-[#16241C]">
-      {/* ========================================================
-          HERO SECTION
-          ======================================================== */}
-      <section className="relative min-h-[90vh] lg:min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Hero Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero-alberca.png"
-            alt="Orgánico Hotel Boutique Tepoztlán - Alberca y riscos del Tepozteco"
-            fill
-            priority
-            quality={90}
-            className="object-cover object-center scale-105 transform animate-fadeIn transition-transform duration-1000"
-          />
-          {/* Subtle gradient overlays */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#16241C] via-[#16241C]/40 to-[#16241C]/60" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(22,36,28,0.6)_100%)]" />
-        </div>
-
-        {/* Hero Content */}
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-28 pb-16 flex flex-col items-center">
-          {/* Título Principal: Primera línea elegante y sutil, segunda línea protagonista pero estética y equilibrada en escritorio */}
-          <h1 className="font-serif max-w-4xl drop-shadow-2xl mb-6 text-center">
-            <span className="block text-xs sm:text-sm md:text-base font-light text-[#F4F5F1]/80 tracking-[0.2em] sm:tracking-[0.25em] uppercase mb-2 sm:mb-2.5">
-              Así se siente un Pueblo Mágico,
-            </span>
-            <span className="block italic text-[#E2D8CC] text-[2.2rem] leading-[1.12] sm:text-4xl md:text-5xl lg:text-6xl font-normal drop-shadow-2xl">
-              Así se Siente Orgánico Tepoztlán.
-            </span>
-          </h1>
-
-          {/* Subtítulo: exactamente dos párrafos/renglones equilibrados sin saltos huérfanos */}
-          <div className="max-w-3xl mx-auto text-xs sm:text-sm md:text-base text-[#F4F5F1]/85 font-light leading-relaxed mb-8 drop-shadow space-y-1 sm:space-y-1.5 text-center">
-            <p className="sm:whitespace-nowrap">
-              Un refugio exclusivo de paz y descanso en las faldas del Tepozteco.
-            </p>
-            <p className="sm:whitespace-nowrap">
-              Confort refinado, cocina de autor y naturaleza en perfecta armonía.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap items-center justify-center gap-3 w-full max-w-full">
-            <a
-              href={generalBookingWa}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg bg-[#C5B49F] hover:bg-[#D6C8B5] text-[#16241C] font-semibold text-[11px] sm:text-xs uppercase tracking-[0.16em] transition-all duration-300 shadow-lg shadow-[#C5B49F]/20 group whitespace-nowrap"
-            >
-              <WhatsAppIcon className="w-3.5 h-3.5" />
-              <span>Reservar</span>
-            </a>
-
-            <Link
-              href="/habitaciones"
-              className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 sm:px-5 sm:py-3 rounded-lg bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/20 text-[#F4F5F1] font-medium text-[11px] sm:text-xs uppercase tracking-[0.16em] transition-all duration-300 group whitespace-nowrap"
-            >
-              <span>Ver Habitaciones</span>
-              <ArrowRight className="w-3.5 h-3.5 text-[#C5B49F] transition-transform group-hover:translate-x-0.5" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* 1. HERO SECTION */}
+      <HeroSection />
 
       {/* ========================================================
           GRUPO ORGÁNICO HOTELES BOUTIQUE (JUSTO DESPUÉS DEL HERO)

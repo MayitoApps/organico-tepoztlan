@@ -33,9 +33,11 @@ const config: Config = {
         terracotta: "#C37250",
       },
       fontFamily: {
-        serif: ["var(--font-cormorant)", "Georgia", "serif"],
-        sans: ["var(--font-outfit)", "system-ui", "sans-serif"],
+        sans: ["var(--font-sans)", "system-ui", "-apple-system", "sans-serif"],
+        display: ["var(--font-display)", "system-ui", "sans-serif"],
         cinzel: ["var(--font-cinzel)", "Cinzel", "Georgia", "serif"],
+        serif: ["var(--font-display)", "var(--font-sans)", "system-ui", "sans-serif"],
+        cormorant: ["var(--font-display)", "Georgia", "serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
