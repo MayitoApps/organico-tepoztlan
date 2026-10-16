@@ -3,14 +3,10 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import WhatsAppIcon from "@/components/WhatsAppIcon";
-import { getWhatsAppLink } from "@/lib/constants";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { HOTEL_INFO } from "@/lib/constants";
 
 export default function HeroSection() {
-  const generalBookingWa = getWhatsAppLink(
-    "Hola, me gustaría consultar disponibilidad general para hospedarme en Orgánico Hotel Boutique Tepoztlán."
-  );
 
   return (
     <section className="relative min-h-[92vh] lg:min-h-screen flex items-center justify-center pt-28 pb-20 px-5 sm:px-8 overflow-hidden bg-[#16241C]">
@@ -54,14 +50,14 @@ export default function HeroSection() {
         {/* Direct Actions */}
         <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 w-full sm:w-auto reveal">
           <a
-            href={generalBookingWa}
+            href={HOTEL_INFO.bookingEngineUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-[#C5B49F] text-[#16241C] text-xs sm:text-sm font-semibold uppercase tracking-wider hover:bg-[#D6C8B5] hover:shadow-lg hover:shadow-[#C5B49F]/20 active:scale-[0.98] transition-all duration-300 shadow-2xl select-none"
-            aria-label="Reservar por WhatsApp para Orgánico Tepoztlán"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#C5B49F] text-[#16241C] text-xs sm:text-sm font-semibold uppercase tracking-wider hover:bg-[#D6C8B5] hover:shadow-lg hover:shadow-[#C5B49F]/20 active:scale-[0.98] transition-all duration-300 shadow-2xl select-none"
+            aria-label="Reservar en Orgánico Hotel Boutique Tepoztlán"
           >
-            <WhatsAppIcon size={18} className="w-4 h-4 shrink-0" />
-            <span>Reservar por WhatsApp</span>
+            <span>Reservar</span>
+            <ArrowUpRight className="w-4 h-4 shrink-0" />
           </a>
           <Link
             href="/habitaciones"

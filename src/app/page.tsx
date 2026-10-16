@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BedDouble, Check } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BedDouble, Check } from "lucide-react";
 import {
+  HOTEL_INFO,
   ROOMS_DATA,
   SPACES_DATA,
   EXPERIENCES_DATA,
@@ -101,7 +102,6 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {ROOMS_DATA.map((room, idx) => {
-              const roomWa = getWhatsAppLink(room.whatsappMessage);
               return (
                 <div
                   key={room.id}
@@ -148,16 +148,16 @@ export default function HomePage() {
                       ))}
                     </div>
 
-                    {/* Botón Reservar: solo dice "Reservar" con icono negro de WhatsApp */}
+                    {/* Botón Reservar: lleva a Easy-Rez sin logo de whatsapp */}
                     <div className="pt-4 flex flex-col sm:flex-row gap-3">
                       <a
-                        href={roomWa}
+                        href={HOTEL_INFO.bookingEngineUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg bg-[#C5B49F] hover:bg-[#D6C8B5] text-[#16241C] font-semibold text-xs uppercase tracking-[0.16em] transition-all duration-300 shadow-md"
                       >
-                        <WhatsAppIcon className="w-4 h-4" />
                         <span>Reservar</span>
+                        <ArrowUpRight className="w-4 h-4" />
                       </a>
 
                       <Link

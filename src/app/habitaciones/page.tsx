@@ -2,9 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
-import { Check, BedDouble } from "lucide-react";
-import { ROOMS_DATA, getWhatsAppLink } from "@/lib/constants";
-import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { Check, BedDouble, ArrowUpRight } from "lucide-react";
+import { ROOMS_DATA, HOTEL_INFO } from "@/lib/constants";
 import OrigenSpaBanner from "@/components/OrigenSpaBanner";
 
 export const metadata: Metadata = {
@@ -33,7 +32,6 @@ export default function HabitacionesPage() {
       {/* Room Details */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 mb-24">
         {ROOMS_DATA.map((room, index) => {
-          const roomWa = getWhatsAppLink(room.whatsappMessage);
           const isReversed = index % 2 !== 0;
 
           return (
@@ -119,16 +117,16 @@ export default function HabitacionesPage() {
                   </ul>
                 </div>
 
-                {/* Personalized Action Buttons: Reservar por WhatsApp o por Formulario */}
+                {/* Botón Reservar: lleva al motor Easy-Rez */}
                 <div className="pt-4 flex flex-col sm:flex-row gap-3">
                   <a
-                    href={roomWa}
+                    href={HOTEL_INFO.bookingEngineUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-4 rounded-lg bg-[#C5B49F] hover:bg-[#D6C8B5] text-[#16241C] font-semibold text-xs uppercase tracking-widest transition-all duration-300 shadow-xl"
                   >
-                    <WhatsAppIcon className="w-4 h-4" />
                     <span>Reservar</span>
+                    <ArrowUpRight className="w-4 h-4" />
                   </a>
 
                   <Link
