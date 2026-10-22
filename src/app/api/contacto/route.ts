@@ -7,7 +7,7 @@ export const runtime = "nodejs";
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const DEFAULT_RECEIVER_EMAIL = "artes.grupoorganico@gmail.com";
 const DEFAULT_SMTP_USER = "artes.grupoorganico@gmail.com";
-const DEFAULT_SMTP_PASS = "aifqxmkbkmasqtjn";
+const DEFAULT_SMTP_PASS = "nefuypoxqlbtfclz";
 
 function sanitize(input?: string | null): string {
   if (!input) return "";
