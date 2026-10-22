@@ -125,7 +125,7 @@ export default function RestaurantePage() {
                 Cenas Privadas & Románticas
               </h3>
               <p className="text-sm text-[#A1B3A7] leading-relaxed">
-                Diseñamos montajes de ensueño para aniversarios, propuestas de matrimonio o celebraciones únicas: caminos de velas, flores frescas, música ambiental y un menú especial de tres a cuatro tiempos.
+                Diseñamos montajes de ensueño para aniversarios, propuestas de matrimonio o celebraciones únicas: caminos de velas, flores frescas, música ambiental y un menú especial de 4 o 6 tiempos.
               </p>
             </div>
 

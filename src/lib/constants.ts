@@ -33,12 +33,11 @@ export const ROOMS_DATA = [
     price: "$3,500.00 MXN",
     category: "Hospedaje Boutique",
     description:
-      "Cama King Size, terraza privada, jardín privado y muebles de jardín en una atmósfera de quietud absoluta.",
+      "Cama King Size, terraza privada y jardín privado en una atmósfera de quietud absoluta.",
     amenities: [
       "Cama King Size",
       "Terraza privada",
       "Jardín privado",
-      "Muebles de jardín",
     ],
     maxOccupancy: "2 adultos",
     image: "/images/rooms/estandar-1.png",
@@ -52,19 +51,18 @@ export const ROOMS_DATA = [
       "Hola, me gustaría consultar disponibilidad y reservar la Habitación Estándar ($3,500.00 MXN) en Orgánico Tepoztlán.",
   },
   {
-    id: "habitacion-master",
-    name: "Habitación Master",
-    slug: "master",
+    id: "habitacion-premium",
+    name: "Habitación Premium",
+    slug: "premium",
     price: "$4,500.00 MXN",
     category: "Suites de Alta Gama",
     description:
-      "Cama King Size, sala de estar con muebles de diseño, terraza privada, jardín privado y muebles de jardín.",
+      "Cama King Size, sala de estar con muebles de diseño, terraza privada y jardín privado.",
     amenities: [
       "Cama King Size",
       "Sala de estar con muebles de diseño",
       "Terraza privada",
       "Jardín privado",
-      "Muebles de jardín",
     ],
     maxOccupancy: "2 a 3 personas",
     image: "/images/rooms/premium-1.png",
@@ -77,7 +75,7 @@ export const ROOMS_DATA = [
       "/images/rooms/premium-6.png",
     ],
     whatsappMessage:
-      "Hola, me gustaría consultar disponibilidad y reservar la Habitación Master ($4,500.00 MXN) en Orgánico Tepoztlán.",
+      "Hola, me gustaría consultar disponibilidad y reservar la Habitación Premium ($4,500.00 MXN) en Orgánico Tepoztlán.",
   },
 ];
 
@@ -153,7 +151,7 @@ export const EXPERIENCES_DATA = [
     title: "Cena Romántica Privada",
     category: "Momentos Íntimos",
     description:
-      "Montaje exclusivo a la luz de las velas o bajo las estrellas, menú maridaje de varios tiempos y atención personalizada para celebrar el amor.",
+      "Montaje exclusivo a la luz de las velas o bajo las estrellas, menú maridaje de 4 o 6 tiempos y atención personalizada para celebrar el amor.",
     image: "/images/experiences/cena-romantica.png",
     whatsappMessage: "Hola, deseo reservar una Cena Romántica Privada en Orgánico Tepoztlán.",
   },

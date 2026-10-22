@@ -74,11 +74,11 @@ const DETAILED_MOMENTS: MomentSectionData[] = [
     badge: "Momento Íntimo",
     icon: <Heart className="w-4 h-4 text-[#C5B49F]" />,
     description:
-      "El romance elevado al más alto nivel en el misticismo de Tepoztlán. Un sendero iluminado por cientos de velas te conduce a un rincón reservado con decoración floral, música tenue y un menú maridaje de cuatro tiempos diseñado exclusivamente para la ocasión por nuestro chef.",
+      "El romance elevado al más alto nivel en el misticismo de Tepoztlán. Un sendero iluminado por cientos de velas te conduce a un rincón reservado con decoración floral, música tenue y un menú maridaje de 4 o 6 tiempos diseñado exclusivamente para la ocasión por nuestro chef.",
     features: [
       "Montaje exclusivo en jardín privado, terraza o salón íntimo",
       "Caminos de velas, pétalos de rosa y arreglos florales frescos",
-      "Menú de 3 o 4 tiempos con maridaje y servicio de mesero privado",
+      "Menú maridaje de 4 o 6 tiempos y servicio de mesero privado",
     ],
     whatsappMessage: "Hola, deseo cotizar y reservar una Cena Romántica Privada en Orgánico Tepoztlán.",
     photos: [

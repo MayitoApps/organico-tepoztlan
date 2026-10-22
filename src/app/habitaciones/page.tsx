@@ -25,7 +25,7 @@ export default function HabitacionesPage() {
           Nuestras Habitaciones
         </h1>
         <p className="text-base md:text-lg text-[#A1B3A7] leading-relaxed max-w-2xl mx-auto">
-          Refugios íntimos en Tepoztlán concebidos con materiales nobles, lencería de alta gama y vistas inspiradoras para una desconexión total.
+          Refugios íntimos en Tepoztlán concebidos con materiales nobles y vistas inspiradoras para una desconexión total.
         </p>
       </section>
 

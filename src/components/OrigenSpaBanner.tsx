@@ -54,7 +54,7 @@ export default function OrigenSpaBanner({ compact = false }: OrigenSpaBannerProp
             </h3>
 
             <p className="text-[#A1B3A7] text-base md:text-lg leading-relaxed">
-              En Orgánico Tepoztlán honramos el descanso integral. Por ello, te invitamos a vivir los rituales ancestrales, masajes terapéuticos, hidroterapia y ceremonias de bienestar en las instalaciones de <strong>Origen Centro Holístico y Spa</strong>.
+              En Orgánico Tepoztlán honramos el descanso integral. Por ello, te invitamos a vivir los rituales ancestrales, masajes terapéuticos y ceremonias de bienestar en las instalaciones de <strong>Origen Centro Holístico y Spa</strong>.
             </p>
 
             <div className="pt-2">
@@ -82,7 +82,7 @@ export default function OrigenSpaBanner({ compact = false }: OrigenSpaBannerProp
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C5B49F] mt-2 flex-shrink-0" />
-                  <span>Rituales de pareja con aromaterapia y exfoliación botánica</span>
+                  <span>Rituales de pareja con aromaterapia</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C5B49F] mt-2 flex-shrink-0" />
