@@ -30,7 +30,7 @@ export const ROOMS_DATA = [
     id: "habitacion-estandar",
     name: "Habitación Estándar",
     slug: "estandar",
-    price: "$3,500.00 MXN",
+    price: "$4,060.00 MXN",
     category: "Hospedaje Boutique",
     description:
       "Cama King Size, terraza privada y jardín privado en una atmósfera de quietud absoluta.",
@@ -48,13 +48,13 @@ export const ROOMS_DATA = [
       "/images/rooms/estandar-4.png",
     ],
     whatsappMessage:
-      "Hola, me gustaría consultar disponibilidad y reservar la Habitación Estándar ($3,500.00 MXN) en Orgánico Tepoztlán.",
+      "Hola, me gustaría consultar disponibilidad y reservar la Habitación Estándar ($4,060.00 MXN) en Orgánico Tepoztlán.",
   },
   {
     id: "habitacion-premium",
     name: "Habitación Premium",
     slug: "premium",
-    price: "$4,500.00 MXN",
+    price: "$5,220.00 MXN",
     category: "Suites de Alta Gama",
     description:
       "Cama King Size, sala de estar con muebles de diseño, terraza privada y jardín privado.",
@@ -75,7 +75,7 @@ export const ROOMS_DATA = [
       "/images/rooms/premium-6.png",
     ],
     whatsappMessage:
-      "Hola, me gustaría consultar disponibilidad y reservar la Habitación Premium ($4,500.00 MXN) en Orgánico Tepoztlán.",
+      "Hola, me gustaría consultar disponibilidad y reservar la Habitación Premium ($5,220.00 MXN) en Orgánico Tepoztlán.",
   },
 ];
 
