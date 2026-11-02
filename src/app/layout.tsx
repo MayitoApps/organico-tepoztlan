@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ScrollObserver from "@/components/ScrollObserver";
-import DiaDeMuertosPopup from "@/components/DiaDeMuertosPopup";
+import NavidadFinAnoPopup from "@/components/NavidadFinAnoPopup";
 import { Analytics } from "@vercel/analytics/next";
 import { HOTEL_INFO } from "@/lib/constants";
 
@@ -182,7 +182,7 @@ export default function RootLayout({
         <main className="flex-grow w-full max-w-full overflow-x-hidden">{children}</main>
         <Footer />
         <FloatingWhatsApp />
-        <DiaDeMuertosPopup />
+        <NavidadFinAnoPopup />
         <Analytics />
       </body>
     </html>
